@@ -1,47 +1,75 @@
----
-sidebar_position: 1
----
+# Overview
 
-# Tutorial Intro
+## Spyderweb Studios: Multiplayer Modular Inventory & Crafting System
 
-Let's discover **Docusaurus in less than 5 minutes**.
+This plugin was designed to be as easy and approachable to use without sacrificing
+on the power and capabilities. It uses C++ on the backend with Unreal Engines FastArray
+so the only the data that was changed will be replicated, minimising the bandwidth and
+latency.
 
-## Getting Started
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
 
-Get started by **creating a new site**.
+This plugin can provide you with a wide range of systems that often required
+for a variety of different games and can offer you the flexibility needed to
+make something unique. It is designed to be modular and with the end goal of
+functionality and ease of integration into an existing project.
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
 
-### What you'll need
+### Interactable System Features
+This is the most basic module included in the Plugin, and holds
+functionality that will most likely already be in the target project
+already.
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-  - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- Fully Networked Interact Component:
+  - Can interact with any item required they have the
+    interact interface implemented
+- Interact Interface:
+  - ObjectAttemptInteract allows any object to attempt
+    to interact with any other. This approach tends to utilise
+    an interface based codebase, great for modularity and integration.
 
-## Generate a new site
+### Inventory System Features
 
-Generate a new Docusaurus site using the **classic template**.
+- Fully Replicated Inventory Component:
+  - Feature Set:
+    - Adding and Removing Items
+    - Transferring Items between Inventories
+    - Using Items
+    - Dropping Items
+  - Utility Functions to retrieve data about the current
+    inventory and the current state of it
+  - Events for when the state of the inventory changes,
+    that work on both Server and Client
+######
+- Items:
+  - Can be defined as individual assets, so
+    can be loaded separately.
+  - Different Item Class for different behaviour
+  - Interfaces to retrieve information
+  - Separates the Inventory Items from the Actors,
+    to lessen the network load whilst maintaining functionality
+######
 
-The classic template will automatically be added to your project after you run the command:
+### Crafting System Features
 
-```bash
-npm init docusaurus@latest my-website classic
-```
+- Fully Replicated Crafting Component:
+  - Feature Set:
+    - Manages the Player's crafting
+      ability and is the main point of entry into the system
 
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
+- Recipe Management Component:
+  - Feature Set:
+    - Manages what Recipes can be crafted at any particular
+      point
+    - Different Actors can have different Recipe Sets without
+      any modification. So you can have a crafting bench and anvil
+      completely separate crafting behaviour and recipes and no problems
+######
 
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.
+- Recipes:
+  - Can be defined as individual assets, so
+    can be loaded separately
+  - Interfaces to retrieve information
+  - Separates the Inventory Items from the Actors,
+    to lessen the network load whilst maintaining functionality
+  

@@ -1,48 +1,39 @@
 ﻿---
-sidebar_label: 'Inventory System'
+sidebar_label: 'Inventory System Intro'
 sidebar_position: 3
 ---
 
-# Tutorial Intro
+# Inventory System Intro
 
-Let's discover **Docusaurus in less than 5 minutes**.
+## Feature Overview
 
-## Getting Started
+The Inventory System has been designed to be as easy to use, and easy to extend. You can extend the Inventory Component
+ to add in as many additional features as you require and overwrite the functions provided to produce custom behaviour.
 
-Get started by **creating a new site**.
+It uses the FastArraySerializer to only replicate the data that has changed. To make working with this easier, we have 
+plenty of utility functions to use this feature. 
 
-Or **try Docusaurus immediately** with **[docusaurus.new](https://docusaurus.new)**.
 
-### What you'll need
+### Inventory System Features
 
-- [Node.js](https://nodejs.org/en/download/) version 18.0 or above:
-    - When installing Node.js, you are recommended to check all checkboxes related to dependencies.
+- Fully Replicated Inventory Component:
+  - Feature Set:
+    - Adding and Removing Items
+    - Transferring Items between Inventories
+    - Using Items
+    - Dropping Items
+  - Utility Functions to retrieve data about the current
+    inventory and the current state of it
+  - Events for when the state of the inventory changes,
+    that work on both Server and Client
+  - Function Library to expose common Utility functions that aren't natively supported. 
+######
+- Items:
+  - Can be defined as individual assets, so
+    can be loaded separately.
+  - Different Item Class for different behaviour
+  - Interfaces to retrieve information
+  - Separates the Inventory Items from the Actors,
+    to lessen the network load whilst maintaining functionality
 
-## Generate a new site
 
-Generate a new Docusaurus site using the **classic template**.
-
-The classic template will automatically be added to your project after you run the command:
-
-```bash
-npm init docusaurus@latest my-website classic
-```
-
-You can type this command into Command Prompt, Powershell, Terminal, or any other integrated terminal of your code editor.
-
-The command also installs all necessary dependencies you need to run Docusaurus.
-
-## Start your site
-
-Run the development server:
-
-```bash
-cd my-website
-npm run start
-```
-
-The `cd` command changes the directory you're working with. In order to work with your newly created Docusaurus site, you'll need to navigate the terminal there.
-
-The `npm run start` command builds your website locally and serves it through a development server, ready for you to view at http://localhost:3000/.
-
-Open `docs/intro.md` (this page) and edit some lines: the site **reloads automatically** and displays your changes.

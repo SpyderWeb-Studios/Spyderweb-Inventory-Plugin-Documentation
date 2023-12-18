@@ -69,6 +69,7 @@ const config: Config = {
           sidebarId: 'tutorialSidebar',
           position: 'left',
           label: 'Tutorial',
+          type: 'docsVersionDropdown'
         },
         {to: '/blog', label: 'Blog', position: 'left'},
         {
@@ -128,6 +129,6 @@ const config: Config = {
       darkTheme: prismThemes.dracula,
     },
   } satisfies Preset.ThemeConfig,
-};
 
+};
 export default config;
