@@ -12,9 +12,9 @@ can control if the item can be added with the `CanAddItemToInventory` function t
 C++ and Blueprint. 
 
 By default, it will verify that the execution is on the server, the item is valid and implements
-the [`ItemUsageInterface`](/docs/Inventory%20System/Interfaces/ItemUsageInterface). This is done to verify that the
+the [`ItemUsageInterface`](/docs/Inventory%20System/Interfaces/ItemUsageInterface.md). This is done to verify that the
 item supports the functionality required from an inventory item. If it does not implement this interface, it will
-check if it implements the [`InventoryItemInterface](/docs/Inventory%20System/Interfaces/InventoryItemInterface), which
+check if it implements the [`InventoryItemInterface](/docs/Inventory%20System/Interfaces/InventoryItemInterface.md), which
 can be used to link to another item which might be what is being added. In other words, you can pass in an item that
 will not pass the checks but have it link to a valid inventory item which will be added instead. 
 
